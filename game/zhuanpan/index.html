@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轉盤</title>
+    <link rel="stylesheet" href="../common/css/common_mobile.css?version=1.0.0">
+    <link rel="stylesheet" href="css/index.css?version=1.0.0">
+    <!-- 移动端适配 -->
+    <script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+</head>
+
+<body>
+<div id="wrap">
+    <div class="caidai"></div>
+    <div class="header clearfix">
+        <p class="rule fl">規則</p>
+        <a href="../my.html" id="myWin">
+            <p class="my fr">我的獎品</p>
+        </a>
+        <div class="title"></div>
+    </div>
+    <!--轮盘-->
+    <div class="rotate">
+        <div class="lunpai">
+            <ul class="prize running">
+                <li>
+                    <span></span>
+                    <p>推薦給好友再轉一次</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>一次進全部</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>買一送二(限今日)</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>聖誕超豪華大禮</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>買一送一</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>謝謝參與</p>
+                </li>
+            </ul>
+        </div>
+        <div class="ring"></div>
+        <div id="btn"></div>
+    </div>
+    <div class="border">
+        您今日還有 <span id="change"> 3 </span> 次抽獎機會
+    </div>
+    <!--滚动信息-->
+    <div class="scroll">
+        <p></p>
+        <div>
+            <ul>
+                <li>
+                    恭喜<span class="start-num">134</span>****<span class="end-num">ser0781</span>
+                    獲得<span class="info">000</span>一份
+                </li>
+                <li>
+                    恭喜<span class="start-num">132</span>****<span class="end-num">31ee45</span>
+                    獲得<span class="info">000</span>一份
+                </li>
+                <li>
+                    恭喜<span class="start-num">150</span>****<span class="end-num">0150</span>
+                    獲得<span class="info">lalalala</span>一份
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--游戏规则弹窗-->
+    <div id="mask-rule">
+        <div class="box-rule">
+            <span class="star"></span>
+            <h2>活動遊戲規則說明</h2>
+            <span id="close-rule"></span>
+            <div class="con">
+                <div class="text">
+                    <p>轉到任何商品絕不退貨及退款，下單前開始前請三思</p>
+                    <p>本遊戲純屬娛樂性質，一但登入進行遊戲代表您同意並遵守隱私權條款、會員服務條款、遊戲管理規章。</p>
+                    <p>本遊戲含有部分成人內容，未滿18歲的玩家請勿進入遊戲，如有違反，後果自負。謝謝您的合作。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中奖提示-->
+    <div id="mask">
+        <div class="blin"></div>
+        <div class="caidai"></div>
+        <div class="winning">
+            <div class="red-head"></div>
+            <div class="red-body"></div>
+            <div id="card">
+                <a href="" target="_self" class="win"></a>
+            </div>
+            <a href="" target="_self" class="btn"></a>
+            <span id="close"></span>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="../common/js/jquery.rotate.js"></script>
+<script src="../common/js/h5_game_common.js?version=1.0.0"></script>
+<script src="js/index.js?version=1.0.0"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
